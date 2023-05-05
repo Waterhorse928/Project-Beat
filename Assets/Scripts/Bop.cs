@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Bop : MonoBehaviour
 {
+    public Conductor conductor;
     public KeyCode keyToPress;
     bool bop = false;
     bool drop = false;
+    int beat;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +18,13 @@ public class Bop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        beat = Mathf.FloorToInt(conductor.songPositionInBeats);
         if(Input.GetKeyDown(keyToPress) && !bop && !drop)
         {
-            bop = true;
-            print("Bop");
+            if(beat%4==0){
+                bop = true;
+                print("Bop");
+            }
         }
 
         if (bop)

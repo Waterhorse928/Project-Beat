@@ -360,23 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bpm: 160
   _audioSource: {fileID: 833419935}
-  _intervals:
-  - _steps: 0.5
-    _trigger:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1191783323}
-          m_TargetAssemblyTypeName: Bop, Assembly-CSharp
-          m_MethodName: DoBop
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  _intervals: []
 --- !u!1 &947348994
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 947348996}
+  - component: {fileID: 947348997}
   m_Layer: 0
   m_Name: Conductor
   m_TagString: Untagged
@@ -408,6 +393,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &947348997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947348994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1185e660c42f87840a04f85bc9167055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  songBpm: 160
+  secPerBeat: 0
+  songPosition: 0
+  songPositionInBeats: 0
+  dspSongTime: 0
+  musicSource: {fileID: 833419935}
+  firstBeatOffset: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +513,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5fb0232af2410549b865fdf2072deef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  conductor: {fileID: 947348997}
   keyToPress: 273
+--- !u!1 &1597751819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1597751821}
+  - component: {fileID: 1597751820}
+  m_Layer: 0
+  m_Name: Remote
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1597751820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597751819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35befcc0d489d9548a946dbc0a9a6210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conductor: {fileID: 947348997}
+  bop: {fileID: 1191783323}
+--- !u!4 &1597751821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597751819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.626728, y: -4.334577, z: 4.6574507}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1684632710
 PrefabInstance:
   m_ObjectHideFlags: 0
