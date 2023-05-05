@@ -245,7 +245,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 00f6ca4bf1042264f8ccf5b5c6a0d64f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7317a1144d7710740acec176297a4301, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f352f11c2d879a47826dce23691084a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bpm: 160
+  _bpm: 152
   _audioSource: {fileID: 833419935}
   _intervals: []
 --- !u!1 &947348994
@@ -405,13 +405,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1185e660c42f87840a04f85bc9167055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songBpm: 160
+  songBpm: 152
   secPerBeat: 0
   songPosition: 0
   songPositionInBeats: 0
   dspSongTime: 0
   musicSource: {fileID: 833419935}
-  firstBeatOffset: 0
+  firstBeatOffset: 0.2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

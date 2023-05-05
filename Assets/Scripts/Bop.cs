@@ -8,6 +8,7 @@ public class Bop : MonoBehaviour
     public KeyCode keyToPress;
     bool bop = false;
     bool drop = false;
+    bool bopped = false;
     int beat;
     // Start is called before the first frame update
     void Start()
@@ -19,11 +20,16 @@ public class Bop : MonoBehaviour
     void Update()
     {
         beat = Mathf.FloorToInt(conductor.songPositionInBeats);
-        if(Input.GetKeyDown(keyToPress) && !bop && !drop)
+        // if(Input.GetKeyDown(keyToPress) && !bop && !drop)
+        if (true)
         {
-            if(beat%4==0){
+            if(beat%4==0 && !bopped){
                 bop = true;
                 print("Bop");
+                bopped = true;
+            }
+            else if(beat%4!=0){
+                bopped = false;
             }
         }
 
