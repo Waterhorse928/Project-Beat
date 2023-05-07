@@ -29,7 +29,7 @@ public class Bop : MonoBehaviour
         {
             if(punchies.Contains(beat) && !bopped.Contains(beat)){
                 bop = true;
-                print("Bop");
+                Debug.LogFormat($"Bop {beat}");
                 bopped.Add(beat);
             }
         }
