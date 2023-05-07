@@ -8,8 +8,12 @@ public class Bop : MonoBehaviour
     public KeyCode keyToPress;
     bool bop = false;
     bool drop = false;
-    bool bopped = false;
+    List<int> bopped = new List<int> ();
     int beat;
+
+    List<int> punchies = new List<int> {16,19,24,27,32,35,40,43,48,56,64,80,88,96,112,120,128,136,144,152,160,163,168,171,176,184,192,195,208,216,224,227,240,248,251,256,264,267,272,280,283,285,287,304};
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,13 +27,10 @@ public class Bop : MonoBehaviour
         // if(Input.GetKeyDown(keyToPress) && !bop && !drop)
         if (true)
         {
-            if(beat%4==0 && !bopped){
+            if(punchies.Contains(beat) && !bopped.Contains(beat)){
                 bop = true;
                 print("Bop");
-                bopped = true;
-            }
-            else if(beat%4!=0){
-                bopped = false;
+                bopped.Add(beat);
             }
         }
 
@@ -42,8 +43,6 @@ public class Bop : MonoBehaviour
         {
             bop = false;
             drop = true;
-            print(drop);
-            print(transform.position);
         }
 
         if (drop)

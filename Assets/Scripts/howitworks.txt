@@ -1,0 +1,13 @@
+make a list of all the beats with punch
+within a range near the beat ask if input
+if input, mark inputed
+make sucuss if within smaller window
+if inputed, don't ask for more input
+if fail, play fail animation
+if sucess play punchy
+count sucsesses
+reset inputed before next punch
+
+24,28,32,40,44,48,56,60,64,68,72,76,80,81,84
+
+16,19,24,27,32,35,40,43,48,56,64,80,88,96,112,120,128,136,144,152,160,163,168,171,176,184,192,195,208,216,224,227,240,248,251,256,264,267,272,280,283,285,287,304
