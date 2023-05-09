@@ -19,10 +19,10 @@ public class Remote : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(beat!=Mathf.FloorToInt(conductor.songPositionInBeats)){
-            beat = Mathf.FloorToInt(conductor.songPositionInBeats);
-            print(beat);
-        }
+        // if(beat!=Mathf.FloorToInt(conductor.songPositionInBeats)){
+        //     beat = Mathf.FloorToInt(conductor.songPositionInBeats);
+        //     print(beat);
+        // }
 
     }
 }

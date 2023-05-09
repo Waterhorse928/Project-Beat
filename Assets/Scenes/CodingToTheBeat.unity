@@ -515,6 +515,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conductor: {fileID: 947348997}
   keyToPress: 273
+  punchTiming: 2
+  missTiming: 0.5
 --- !u!1 &1597751819
 GameObject:
   m_ObjectHideFlags: 0
